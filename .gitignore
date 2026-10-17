@@ -1,0 +1,47 @@
+# ===== 数据集与模型权重（体积大，不入库）=====
+# 数据集：目录结构保留占位文件
+data/*
+!data/empty.txt
+
+# 预训练底座权重（ImageBind / Vicuna / PandaGPT）
+pretrained_ckpt/imagebind_ckpt/*
+!pretrained_ckpt/imagebind_ckpt/empty.txt
+pretrained_ckpt/vicuna_ckpt/*
+!pretrained_ckpt/vicuna_ckpt/empty.txt
+pretrained_ckpt/pandagpt_ckpt/*
+!pretrained_ckpt/pandagpt_ckpt/empty.txt
+
+# AnomalyGPT 微调权重
+code/ckpt/
+
+# 各类权重文件后缀（兜底，防止误放进任意目录）
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.onnx
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.ipynb_checkpoints/
+
+# ===== 实验产物 =====
+logs/
+log/
+wandb/
+runs/
+*.log
+
+# ===== IDE / 系统 =====
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
